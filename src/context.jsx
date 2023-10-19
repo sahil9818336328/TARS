@@ -16,8 +16,6 @@ const AppProvider = ({ children }) => {
     localStorage.setItem('darkTheme', newDarkTheme)
   }
 
-  console.log(isDarkTheme)
-
   return (
     <Provider
       value={{

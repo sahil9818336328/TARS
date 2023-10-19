@@ -58,7 +58,7 @@ const StyledSingleImageWrapper = styled.div`
         gap: 0.5rem;
         font-size: 13px;
 
-        @media screen and (max-width: 780px) {
+        @media screen and (max-width: 850px) {
           margin-left: auto;
         }
 
@@ -89,7 +89,7 @@ const StyledSingleImageWrapper = styled.div`
         margin-bottom: 0.5rem;
         justify-self: flex-end;
 
-        @media screen and (max-width: 780px) {
+        @media screen and (max-width: 850px) {
           display: none;
         }
 
@@ -155,7 +155,7 @@ const StyledSingleImageWrapper = styled.div`
               margin-left: 2rem;
               font-style: italic;
 
-              @media screen and (max-width: 780px) {
+              @media screen and (max-width: 850px) {
                 display: none;
               }
 
@@ -183,7 +183,7 @@ const StyledSingleImageWrapper = styled.div`
           .phone-download {
             justify-self: flex-end;
 
-            @media screen and (min-width: 781px) {
+            @media screen and (min-width: 851px) {
               display: none;
             }
 
@@ -199,7 +199,7 @@ const StyledSingleImageWrapper = styled.div`
           .image-info {
             display: flex;
             gap: 1rem;
-            @media screen and (max-width: 780px) {
+            @media screen and (max-width: 850px) {
               display: none;
             }
 
@@ -258,7 +258,7 @@ const StyledSingleImageWrapper = styled.div`
         justify-content: space-between;
         margin-top: 1rem;
 
-        @media screen and (min-width: 781px) {
+        @media screen and (min-width: 851px) {
           display: none;
         }
 
