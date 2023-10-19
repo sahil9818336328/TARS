@@ -116,7 +116,7 @@ const StyledSingleImageWrapper = styled.div`
         align-items: center;
         justify-content: space-between;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 480px) {
           flex-direction: column;
           gap: 0.5rem;
         }
@@ -198,6 +198,7 @@ const StyledSingleImageWrapper = styled.div`
           }
           .image-info {
             display: flex;
+            align-items: center;
             gap: 1rem;
             @media screen and (max-width: 850px) {
               display: none;
@@ -301,6 +302,7 @@ const StyledSingleImageWrapper = styled.div`
 
             .like-icon {
               font-size: 1.4rem;
+              margin-bottom: 2px;
             }
 
             .likes {
