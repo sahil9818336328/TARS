@@ -26,6 +26,7 @@ const Hero = () => {
             <p className='info-description'>
               Over 2.4 million+ stock Images by our talented community
             </p>
+
             <SearchInput
               placeholder='Search high resolution Images, categories, wallpapers'
               background='#fff'

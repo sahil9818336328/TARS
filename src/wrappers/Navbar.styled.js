@@ -40,8 +40,12 @@ const StyledNavbarWrapper = styled.nav`
         display: none;
       }
 
-      > div {
+      .search-container {
         width: 100%;
+
+        .input-search {
+          width: 100%;
+        }
       }
 
       .nav-options {

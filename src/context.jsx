@@ -7,6 +7,8 @@ const globalContext = createContext('')
 const AppProvider = ({ children }) => {
   const Provider = globalContext.Provider
   const [query, setQuery] = useState('')
+  const [searchSuggestions, setSearchSuggestions] = useState('')
+  const [searchOpen, setSearchOpen] = useState(false)
   const [isDarkTheme, setIsDarkTheme] = useState(checkDefaultTheme())
 
   const toggleDarkTheme = () => {
@@ -21,8 +23,12 @@ const AppProvider = ({ children }) => {
       value={{
         query,
         setQuery,
+        searchOpen,
         isDarkTheme,
+        setSearchOpen,
         toggleDarkTheme,
+        searchSuggestions,
+        setSearchSuggestions,
       }}
     >
       {children}

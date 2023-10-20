@@ -14,7 +14,6 @@ const Photos = ({
   user: {
     profile_image: { medium },
     name,
-    social: { instagram_username },
     username,
   },
 }) => {
@@ -28,7 +27,7 @@ const Photos = ({
             <img src={medium} alt={name} className='user-img' />
             <div className='user'>
               <p className='user-name'>{name}</p>
-              <p className='user-social'>@{instagram_username || username}</p>
+              <p className='user-social'>@{username}</p>
             </div>
           </div>
           <p className='likes'>

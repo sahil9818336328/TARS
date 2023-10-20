@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import axios from 'axios'
 import Wrapper from '../wrappers/ImgContainer.styled'
 import Loading from '../components/Loading'
@@ -26,7 +26,8 @@ const getUnsplashImages = (url, query) => {
 
 const ImgContainer = () => {
   const [page, setPage] = useState(0)
-  const { query, setSuggestions } = useContext(globalContext)
+  const { query, setSearchSuggestions, setSearchOpen } =
+    useContext(globalContext)
 
   // DATA FETCHING QUERIES
   // YES I NEED TO PUT CLIENT ID IN .ENV, BUT JUST TO AVOID UNNECESSARY BUGS WHILE DEPLOYING.
@@ -51,6 +52,16 @@ const ImgContainer = () => {
     isLoading,
     isError,
   } = useQuery(getUnsplashImages(url, query))
+
+  useEffect(() => {
+    if (photos && photos.length) {
+      setSearchSuggestions(photos)
+    }
+
+    if (photos && !photos.length) {
+      setSearchOpen(false)
+    }
+  }, [photos, query])
 
   if (isLoading) return <Loading />
 
